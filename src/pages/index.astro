@@ -1,0 +1,46 @@
+---
+import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main class="page">
+		<Card
+			title="DCE"
+			description="Cartão com borda escura, texto em vermelho e fundo claro para destacar o conteúdo."
+		/>
+		<Card
+			title="DCE"
+			description="Cartão com borda escura, texto em vermelho e fundo claro para destacar o conteúdo."
+		/>
+		<Card
+			title="DCE"
+			description="Cartão com borda escura, texto em vermelho e fundo claro para destacar o conteúdo."
+		/>
+		<Card
+			title="DCE"
+			description="Cartão com borda escura, texto em vermelho e fundo claro para destacar o conteúdo."
+		/>
+		<Card
+			title="DCE"
+			description="Cartão com borda escura, texto em vermelho e fundo claro para destacar o conteúdo."
+		/>
+		<Card
+			title="DCE"
+			description="Cartão com borda escura, texto em vermelho e fundo claro para destacar o conteúdo."
+		/>
+	</main>
+</Layout>
+
+<style>
+	.page {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(50px, 1fr));
+		gap: 1.5rem;
+		justify-items: center;
+		align-items: start;
+		min-height: 100vh;
+		padding: 2rem;
+		background: #f0f0f0;
+	}
+</style>
