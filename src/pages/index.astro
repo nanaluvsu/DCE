@@ -1,3 +1,4 @@
+
 ---
 import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
@@ -5,49 +6,24 @@ import Anuncio from '../assets/DCEanuncio.svg';
 ---
 
 <Layout>
-	<main class="page">
-		<Card
-			title="DCE"
-			description="Texto Card"
-			source={Anuncio}
-		/>
-		<Card
-			title="DCE"
-			description="oiii testando"
-			source={Anuncio}
-		/>
-		<Card
-			title="DCE"
-			description="Texto Card"
-			source={Anuncio}
-		/>
-		<Card
-			title="DCE"
-			description="Texto Card"
-			source={Anuncio}
-		/>
-		<Card
-			title="DCE"
-			description="Texto Card"
-			source={Anuncio}
-		/>
-		<Card
-			title="DCE"
-			description="Texto Card"
-			source={Anuncio}
-		/>
-	</main>
+    <main class="page">
+        <Card
+            title="DCE"
+            description="Texto Card"
+            source={Anuncio}
+        />
+    </main>
 </Layout>
 
 <style>
-	
-.page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 2rem;
-    box-sizing: border-box;
-    background: #f0f0f0;
-}
+    .page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+        background: #f0f0f0;
+    }
 </style>
