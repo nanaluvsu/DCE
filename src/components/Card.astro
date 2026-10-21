@@ -1,32 +1,36 @@
+
 ---
-import type { SvgComponent } from "astro/types";
-
 interface Props {
-	
-	title: string;
-	description: string;
-	source: ImageMetadata | SvgComponent;
-} 
+    title: string;
+    description: string;
+    source: string;
+}
 
-const { title, description, source: sourceImg } = Astro.props;
+const { title, description, source } = Astro.props;
 ---
 
 <div
-  class="box-border flex h-auto min-h-[400px] w-full max-w-[600px] flex-col rounded-[18px] border-2 border-[#363636] bg-[#f7f7f7] p-6 text-[#b72626] shadow-[8px_8px_0_#363636] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[10px_10px_0_#363636] font-['Inter','Segoe_UI',sans-serif]"
+    class="box-border flex h-auto min-h-[400px] w-full max-w-[600px] flex-col rounded-[18px] border-2 border-[#363636] bg-[#f7f7f7] p-6 text-[#b72626] shadow-[8px_8px_0_#363636] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[10px_10px_0_#363636] font-['Inter','Segoe_UI',sans-serif]"
 >
-  <div class="mb-3">
-	<h2 class="mb-3 m-0 text-[clamp(2.1rem,5vw,3rem)] leading-[0.9] tracking-[0.04em] uppercase text-[#b72626] font-['Bebas_Neue','Arial_Narrow',Arial,sans-serif]">{title}</h2>
-	<p class="m-0 text-base leading-[1.6] text-[#b72626] font-['Bebas_Neue','Arial_Narrow',Arial,sans-serif]">{description}</p>
-  </div>
-  
-<div class="mt-4 w-full flex-none">
-    <img
-        src={(sourceImg as ImageMetadata).src}
-        alt={title}
-        class="block h-auto max-w-none rounded-[10px]"
-    />
+    <div class="mb-3">
+        <h2 class="mb-3 m-0 text-[clamp(2.1rem,5vw,3rem)] leading-[0.9] tracking-[0.04em] uppercase text-[#b72626] font-['Bebas_Neue','Arial_Narrow',Arial,sans-serif]">
+            {title}
+        </h2>
+
+        <p class="m-0 text-base leading-[1.6] text-[#b72626] font-['Bebas_Neue','Arial_Narrow',Arial,sans-serif]">
+            {description}
+        </p>
+    </div>
+
+    <div class="mt-4 w-full">
+        <img
+            src={source}
+            alt={title}
+            class="block h-auto w-full rounded-[10px]"
+        />
+    </div>
 </div>
-</div>
+
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700&display=swap');
 </style>
